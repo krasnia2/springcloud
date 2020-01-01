@@ -1,9 +1,12 @@
 # configserver
 - Enables HTTP access to a configuration store
+- Custom Annotation: @EnableConfigServer
 - Support for placeholders in URI (i.e. nested structures)
 - Support for multiple profiles (i.e default, dev, qa, prod)
 - File name (when storing config via file) contains the app name, and an optional proifle
 - Aggregates All properties from matching files (useful for shared config and app specific config)
+- Integrates with Spring Security.
+- Support for Encryption/Decryption
 
 # Why
  - Remove settings such as feature Toggles, Connection Strings, Logging Levels from compiled code into an externaly managed configuration store.
@@ -16,5 +19,9 @@
 - Secure Access to config server?
 
 # Testing
- - Get local configuration 
- 	- http://localhost:8888/<app_name>/default
+ - URI structure
+ 	- /{application}/{profile}/{label}
+ - Get local config for the Blue app
+ 	- http://localhost:8888/BLUE/default
+ - Get local config for the Blue app with and property app.name
+ 	- http://localhost:8888/BLUE/native/app.name
