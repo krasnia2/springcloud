@@ -7,6 +7,7 @@
 - Aggregates All properties from matching files (useful for shared config and app specific config)
 - Integrates with Spring Security.
 - Support for Encryption/Decryption
+	- Java Cryptography Extension
 
 # Why
  - Remove settings such as feature Toggles, Connection Strings, Logging Levels from compiled code into an externaly managed configuration store.
